@@ -1,0 +1,625 @@
+window.WHITEPAPER_ARCHIVE = {
+  "stages": [
+    {
+      "id": "august",
+      "num": "01",
+      "short": "The private draft",
+      "name": "Before the name",
+      "period": "August 2008",
+      "date": "20–22 August 2008",
+      "dateKind": "Dates displayed in the correspondence",
+      "year": "2008",
+      "month": "AUG",
+      "day": "20–22",
+      "custodian": "Adam Back & Wei Dai",
+      "artifact": "Email abstract",
+      "badge": "A surviving fragment",
+      "title": "Electronic Cash Without a Trusted Third Party",
+      "dek": "A paper shared in private. An idea almost ready for the world.",
+      "story": "Writing as satoshi@anonymousspeech.com, Satoshi sent Adam Back a draft link on 20 August, then contacted Wei Dai after Back pointed him to b-money. The title and abstract survive in their correspondence; an authenticated complete August PDF has not been located in the source record used here.",
+      "changeTitle": "The idea is already here.",
+      "change": "The abstract already describes the chain of proof-of-work, the longest chain and nodes leaving and rejoining. It says “offer” and “broadcasted.” The familiar Bitcoin title comes later in the surviving record.",
+      "survive": "Title + abstract + sender address preserved in email. Full PDF and page count unknown.",
+      "dateNote": "The Adam Back email is dated 20 August 2008, 17:30:39 UTC in Exhibit AB1. The Dai transcript displays 22 August without a UTC offset. Neither is a PDF creation time.",
+      "caution": "This is a typeset transcription of the surviving abstract, not a facsimile of the missing PDF.",
+      "pages": null,
+      "bytes": null,
+      "sha256": null,
+      "rawDate": null,
+      "utc": null,
+      "pdf": null,
+      "sections": {
+        "title": "Electronic Cash Without a Trusted Third Party",
+        "abstract": "A purely peer-to-peer version of electronic cash would allow online payments to be sent directly from one party to another without the burdens of going through a financial institution. Digital signatures offer part of the solution, but the main benefits are lost if a trusted party is still required to prevent double-spending. We propose a solution to the double-spending problem using a peer-to-peer network. The network timestamps transactions by hashing them into an ongoing chain of hash-based proof-of-work, forming a record that cannot be changed without redoing the proof-of-work. The longest chain not only serves as proof of the sequence of events witnessed, but proof that it came from the largest pool of CPU power. As long as honest nodes control the most CPU power on the network, they can generate the longest chain and outpace any attackers. The network itself requires minimal structure. Messages are broadcasted on a best effort basis, and nodes can leave and rejoin the network at will, accepting the longest proof-of-work chain as proof of what happened while they were gone.",
+        "fees": null,
+        "difficulty": null,
+        "network": null,
+        "spv": null,
+        "contact": "satoshi@anonymousspeech.com",
+        "honesty": null
+      },
+      "sources": [
+        "back",
+        "dai",
+        "back-exhibit"
+      ],
+      "downloadUrl": null,
+      "contactBasis": "Email sender in the Adam Back and Wei Dai correspondence; the missing PDF’s printed address is unknown."
+    },
+    {
+      "id": "october",
+      "num": "02",
+      "short": "The eight-page paper",
+      "name": "Bitcoin enters the record",
+      "period": "October 2008",
+      "date": "3 October 2008",
+      "dateKind": "Embedded PDF creation date",
+      "year": "2008",
+      "month": "OCT",
+      "day": "03",
+      "custodian": "StealthMonger / Gwern",
+      "artifact": "8-page PDF",
+      "badge": "The earliest surviving PDF",
+      "title": "Bitcoin: A Peer-to-Peer Electronic Cash System",
+      "dek": "A new title. Eight pages. The copy an anonymous reader kept.",
+      "story": "The surviving October file carries the Bitcoin title and a Vistomail address. StealthMonger later shared its hash and offered the file through an anonymous mail service. Gwern hosts a matching copy. Its title and abstract match the 31 October public announcement.",
+      "changeTitle": "“Offer” becomes “provide.”",
+      "change": "The title now names Bitcoin, and one word changes in the abstract. There is no transaction-fee paragraph in §6. References still fit on the eighth and final page.",
+      "survive": "Complete PDF · 8 pages, including references.",
+      "dateNote": "StealthMonger said he received it on 8 November 2008. A separate 2015 post gives a local file date of 2 November. These two claims are not reconciled by the posts.",
+      "caution": "Very likely the release-era edition. Metadata and later testimony do not by themselves establish the exact bytes served on 31 October.",
+      "utc": "2008-10-03 20:49:58 UTC",
+      "received": "8 November 2008 (reported)",
+      "sources": [
+        "october-pdf",
+        "monger",
+        "monger-date",
+        "announcement",
+        "gwern",
+        "compare-report-1"
+      ],
+      "pages": 8,
+      "bytes": 183697,
+      "sha256": "427c63b364c6db914cf23072a09ffd53ee078397b7c6ab2d604e12865a982faa",
+      "rawDate": "D:20081003134958-07'00'",
+      "creator": "Writer",
+      "producer": "OpenOffice.org 2.4",
+      "pdf": "assets/documents/october.pdf",
+      "sections": {
+        "title": "Bitcoin: A Peer-to-Peer Electronic Cash System",
+        "abstract": "A purely peer-to-peer version of electronic cash would allow online payments to be sent directly from one party to another without the burdens of going through a financial institution. Digital signatures provide part of the solution, but the main benefits are lost if a trusted party is still required to prevent double-spending. We propose a solution to the double-spending problem using a peer-to-peer network. The network timestamps transactions by hashing them into an ongoing chain of hash-based proof-of-work, forming a record that cannot be changed without redoing the proof-of-work. The longest chain not only serves as proof of the sequence of events witnessed, but proof that it came from the largest pool of CPU power. As long as honest nodes control the most CPU power on the network, they can generate the longest chain and outpace any attackers. The network itself requires minimal structure. Messages are broadcasted on a best effort basis, and nodes can leave and rejoin the network at will, accepting the longest proof-of-work chain as proof of what happened while they were gone.",
+        "fees": "",
+        "difficulty": "To compensate for increasing hardware speed and varying interest in running nodes over time, the proof-of-work difficulty is determined by a moving average targeting an average number of blocks per hour. If they're generated too fast, the difficulty increases.",
+        "network": "New transactions are broadcasted to all nodes.",
+        "spv": "As such, the verification is reliable as long as honest nodes control the network, but is more vulnerable if the network is overpowered by an attacker. While network nodes can verify transactions for themselves and are only vulnerable to reversal, the simplified method can be fooled by an attacker's fabricated transactions for as long as the attacker can continue to overpower the network. One strategy to protect against this would be to accept alerts from network nodes when they detect an invalid block, prompting the user's software to download the full block and reported transactions to confirm the inconsistency. Businesses that receive frequent payments will probably still want to run their own nodes for more independent security and quicker verification.",
+        "contact": "satoshi@vistomail.com",
+        "honesty": "The incentive may also help encourage nodes to stay honest."
+      },
+      "downloadUrl": "https://gwern.net/doc/bitcoin/2008-10-03-nakamoto-bitcoindraft.pdf",
+      "contactBasis": "Printed contact address on PDF page 1."
+    },
+    {
+      "id": "bohm",
+      "num": "03",
+      "short": "The preserved revision",
+      "name": "The economics take shape",
+      "period": "November 2008",
+      "date": "11 November 2008",
+      "dateKind": "Embedded PDF creation date",
+      "year": "2008",
+      "month": "NOV",
+      "day": "11",
+      "custodian": "Nicholas Bohm",
+      "artifact": "9-page PDF",
+      "badge": "An independently retained copy",
+      "title": "Bitcoin: A Peer-to-Peer Electronic Cash System",
+      "dek": "One new paragraph. A ninth page. A record preserved for years.",
+      "story": "Bohm retained this revision and later supplied it with his evidence in COPA v Wright. His witness statement records a download on 18 January 2009 at 13:27 GMT. The PDF itself was created in November. Its MD5 and SHA-256 match the NB1 entry in Madden’s Appendix PM3, §42.",
+      "changeTitle": "Same abstract. New economics.",
+      "change": "Section 6 adds transaction fees, a predetermined number of coins, and a possible transition to fee-only incentives. The following sentence loses “also.” The abstract stays identical to October. Repagination pushes the references onto page nine.",
+      "survive": "Complete PDF · 9 pages, with references on page 9.",
+      "dateNote": "Downloaded 18 January 2009, 13:27 GMT (13:27 UTC), according to the system metadata described in Bohm’s witness statement, paragraph 19. Appendix PM3, §47, independently lists the same embedded creation timestamp.",
+      "caution": "The paper refers to a predetermined number of coins, but does not state the numerical 21-million limit.",
+      "utc": "2008-11-11 16:00:34 UTC",
+      "received": "18 January 2009 · 13:27 UTC",
+      "sources": [
+        "bohm-statement",
+        "bohm-pdf",
+        "fees-email",
+        "bohm-pm3",
+        "bohm-md5",
+        "compare-report-1",
+        "compare-report-2"
+      ],
+      "pages": 9,
+      "bytes": 184366,
+      "sha256": "e6cc7c952c688b234f9872c3e2f50060ae6556fd27925cba503c6460048e50a9",
+      "rawDate": "D:20081111080034-08'00'",
+      "creator": "Writer",
+      "producer": "OpenOffice.org 2.4",
+      "pdf": "assets/documents/bohm.pdf",
+      "sections": {
+        "title": "Bitcoin: A Peer-to-Peer Electronic Cash System",
+        "abstract": "A purely peer-to-peer version of electronic cash would allow online payments to be sent directly from one party to another without the burdens of going through a financial institution. Digital signatures provide part of the solution, but the main benefits are lost if a trusted party is still required to prevent double-spending. We propose a solution to the double-spending problem using a peer-to-peer network. The network timestamps transactions by hashing them into an ongoing chain of hash-based proof-of-work, forming a record that cannot be changed without redoing the proof-of-work. The longest chain not only serves as proof of the sequence of events witnessed, but proof that it came from the largest pool of CPU power. As long as honest nodes control the most CPU power on the network, they can generate the longest chain and outpace any attackers. The network itself requires minimal structure. Messages are broadcasted on a best effort basis, and nodes can leave and rejoin the network at will, accepting the longest proof-of-work chain as proof of what happened while they were gone.",
+        "fees": "The incentive is also funded with transaction fees. The output value of every transaction is equal to the input value minus a transaction fee, and the incentive is increased by the total transaction fees in the block. Once a predetermined number of coins have entered circulation, the incentive can transition entirely to transaction fees and be completely inflation free.",
+        "difficulty": "To compensate for increasing hardware speed and varying interest in running nodes over time, the proof-of-work difficulty is determined by a moving average targeting an average number of blocks per hour. If they're generated too fast, the difficulty increases.",
+        "network": "New transactions are broadcasted to all nodes.",
+        "spv": "As such, the verification is reliable as long as honest nodes control the network, but is more vulnerable if the network is overpowered by an attacker. While network nodes can verify transactions for themselves and are only vulnerable to reversal, the simplified method can be fooled by an attacker's fabricated transactions for as long as the attacker can continue to overpower the network. One strategy to protect against this would be to accept alerts from network nodes when they detect an invalid block, prompting the user's software to download the full block and reported transactions to confirm the inconsistency. Businesses that receive frequent payments will probably still want to run their own nodes for more independent security and quicker verification.",
+        "contact": "satoshi@vistomail.com",
+        "honesty": "The incentive may help encourage nodes to stay honest."
+      },
+      "downloadUrl": "https://github.com/NicholasBohm/Emails/blob/main/bitcoin-nb1.pdf",
+      "contactBasis": "Printed contact address on PDF page 1.",
+      "md5": "3e5e11e1e3208d2829e887fb1c86bd05",
+      "evidenceSources": [
+        "bohm-pm3",
+        "bohm-md5"
+      ]
+    },
+    {
+      "id": "march",
+      "num": "04",
+      "short": "The familiar edition",
+      "name": "The paper we know",
+      "period": "March 2009",
+      "date": "24 March 2009",
+      "dateKind": "Embedded PDF creation date",
+      "year": "2009",
+      "month": "MAR",
+      "day": "24",
+      "custodian": "SourceForge / bitcoin.org",
+      "artifact": "9-page PDF",
+      "badge": "The widely distributed edition",
+      "title": "Bitcoin: A Peer-to-Peer Electronic Cash System",
+      "dek": "Clearer language. Rearranged arguments. The familiar nine pages.",
+      "story": "The March revision is the familiar bitcoin.org whitepaper. The historical SourceForge file is also associated with 24 March 2009. Here, the exact time is taken from the PDF’s embedded creation field, independently of the hosting date.",
+      "changeTitle": "A final editorial pass.",
+      "change": "The abstract sharpens the CPU-majority condition and changes “broadcasted” to “broadcast.” The printed address changes from satoshi@vistomail.com to satoshin@gmx.com. Fee language and the SPV discussion are edited; the unchanged difficulty paragraph moves from §6 to §4.",
+      "survive": "Complete PDF · 9 pages, with references on page 9.",
+      "dateNote": "The embedded time is 11:33:15 at UTC−06:00, which converts to 17:33:15 UTC on 24 March 2009. Appendix PM3, §§33–35, reproduces the SourceForge RSS pubDate for the matching PDF: 17:50:18 UTC that day. Export and publication are separate events.",
+      "caution": "“Final” here means the familiar March edition in this four-stage comparison. These four stages need not be every draft Satoshi ever produced.",
+      "utc": "2009-03-24 17:33:15 UTC",
+      "received": "SourceForge edition · 24 March 2009",
+      "sources": [
+        "march-pdf",
+        "sourceforge",
+        "sourceforge-discussion",
+        "compare-report-2",
+        "bohm-pm3"
+      ],
+      "pages": 9,
+      "bytes": 184292,
+      "sha256": "b1674191a88ec5cdd733e4240a81803105dc412d6c6708d53ab94fc248f4f553",
+      "rawDate": "D:20090324113315-06'00'",
+      "creator": "Writer",
+      "producer": "OpenOffice.org 2.4",
+      "pdf": "assets/documents/march.pdf",
+      "sections": {
+        "title": "Bitcoin: A Peer-to-Peer Electronic Cash System",
+        "abstract": "A purely peer-to-peer version of electronic cash would allow online payments to be sent directly from one party to another without going through a financial institution. Digital signatures provide part of the solution, but the main benefits are lost if a trusted third party is still required to prevent double-spending. We propose a solution to the double-spending problem using a peer-to-peer network. The network timestamps transactions by hashing them into an ongoing chain of hash-based proof-of-work, forming a record that cannot be changed without redoing the proof-of-work. The longest chain not only serves as proof of the sequence of events witnessed, but proof that it came from the largest pool of CPU power. As long as a majority of CPU power is controlled by nodes that are not cooperating to attack the network, they'll generate the longest chain and outpace attackers. The network itself requires minimal structure. Messages are broadcast on a best effort basis, and nodes can leave and rejoin the network at will, accepting the longest proof-of-work chain as proof of what happened while they were gone.",
+        "fees": "The incentive can also be funded with transaction fees. If the output value of a transaction is less than its input value, the difference is a transaction fee that is added to the incentive value of the block containing the transaction. Once a predetermined number of coins have entered circulation, the incentive can transition entirely to transaction fees and be completely inflation free.",
+        "difficulty": "To compensate for increasing hardware speed and varying interest in running nodes over time, the proof-of-work difficulty is determined by a moving average targeting an average number of blocks per hour. If they're generated too fast, the difficulty increases.",
+        "network": "New transactions are broadcast to all nodes.",
+        "spv": "As such, the verification is reliable as long as honest nodes control the network, but is more vulnerable if the network is overpowered by an attacker. While network nodes can verify transactions for themselves, the simplified method can be fooled by an attacker's fabricated transactions for as long as the attacker can continue to overpower the network. One strategy to protect against this would be to accept alerts from network nodes when they detect an invalid block, prompting the user's software to download the full block and alerted transactions to confirm the inconsistency. Businesses that receive frequent payments will probably still want to run their own nodes for more independent security and quicker verification.",
+        "contact": "satoshin@gmx.com",
+        "honesty": "The incentive may help encourage nodes to stay honest."
+      },
+      "downloadUrl": "https://bitcoin.org/bitcoin.pdf",
+      "contactBasis": "Printed contact address on PDF page 1."
+    }
+  ],
+  "sources": [
+    {
+      "id": "back",
+      "title": "Satoshi → Adam Back, 20 August 2008",
+      "kind": "Correspondence · reproduced exhibit",
+      "url": "https://bitcoin.fr/wp-content/uploads/2024/02/Back-Nakamoto-1-850x660.webp",
+      "note": "Image of the original email, reproduced by bitcoin.fr. Establishes the early draft link and title. The sender is satoshi@anonymousspeech.com."
+    },
+    {
+      "id": "dai",
+      "title": "Satoshi → Wei Dai, August 2008",
+      "kind": "Correspondence · transcript",
+      "url": "https://gwern.net/doc/bitcoin/2008-nakamoto#emails",
+      "note": "Source of the August abstract transcription. The displayed date is 22 August; no UTC offset is supplied in that transcript. Its From and Cc headers identify satoshi@anonymousspeech.com."
+    },
+    {
+      "id": "october-pdf",
+      "title": "October PDF, hosted by Gwern",
+      "kind": "Original file · locally hashed",
+      "url": "https://gwern.net/doc/bitcoin/2008-10-03-nakamoto-bitcoindraft.pdf",
+      "note": "183,697 bytes. SHA-256 matches the value published by StealthMonger."
+    },
+    {
+      "id": "monger",
+      "title": "StealthMonger’s 2017 account",
+      "kind": "First-person mailing-list post",
+      "url": "https://www.metzdowd.com/pipermail/cryptography/2017-August/032666.html",
+      "note": "Reports receipt on 8 November 2008, file size, hash and the 26-part anonymous-mail delivery."
+    },
+    {
+      "id": "monger-date",
+      "title": "StealthMonger’s local file date",
+      "kind": "First-person mailing-list post · 24 January 2015",
+      "url": "https://www.metzdowd.com/pipermail/cryptography/2015-January/024438.html",
+      "note": "Gives a 2 November 2008 local file date, distinct from the later stated receipt date."
+    },
+    {
+      "id": "announcement",
+      "title": "The public announcement, 31 October 2008",
+      "kind": "Contemporaneous mailing-list message",
+      "url": "https://www.metzdowd.com/pipermail/cryptography/2008-October/014810.html",
+      "note": "Satoshi’s Bitcoin announcement includes the title, link and abstract."
+    },
+    {
+      "id": "gwern",
+      "title": "Gwern’s recovery notes",
+      "kind": "Archival commentary",
+      "url": "https://gwern.net/doc/bitcoin/2008-nakamoto",
+      "note": "Describes the matching October copy and the search for the missing August draft."
+    },
+    {
+      "id": "bohm-statement",
+      "title": "Nicholas Bohm’s witness statement, §19",
+      "kind": "Primary witness testimony · July 2023",
+      "url": "https://bitcoindefense.org/assets/documents/Witness-Statement-of-Nicholas-Bohm.pdf#page=5",
+      "note": "Records the January download and November PDF creation timestamp."
+    },
+    {
+      "id": "bohm-pdf",
+      "title": "Bohm PDF · NicholasBohm/Emails",
+      "kind": "Preserved file · locally hashed",
+      "url": "https://github.com/NicholasBohm/Emails/blob/main/bitcoin-nb1.pdf",
+      "note": "184,366 bytes. Retrieved from NicholasBohm/Emails on 21 October 2026 and verified identical to the supplied bitcoin-nb1(1).pdf and the bundled copy. MD5 and SHA-256 match Appendix PM3, §42."
+    },
+    {
+      "id": "bohm-pm3",
+      "title": "Madden · Appendix PM3: Bitcoin White Paper",
+      "kind": "COPA v Wright · expert report appendix · 80 pages",
+      "url": "https://github.com/NicholasBohm/Emails/blob/main/Appendix%20PM3.pdf",
+      "note": "Identified in the document as “Madden Appendix PM3.” The NB1 analysis starts at §41 (p. 14); §42 records the MD5 and SHA-256 across pp. 14–15; §47 lists creation metadata. §§49–60 discuss text comparisons and forensic examination. Paragraphs 33–35 reproduce the archived SourceForge RSS record: 24 March 2009, 17:50:18 UTC, with an MD5 matching the preserved March PDF."
+    },
+    {
+      "id": "bohm-md5",
+      "title": "Bohm hash record · JFIF excerpt",
+      "kind": "Image of Appendix PM3, §42 · pp. 14–15",
+      "url": "https://github.com/NicholasBohm/Emails/blob/main/md5%20Bohm's%20whitepaper%20copy%20e37bb348-0839-4c41-a299-30e9e6adc830.jfif",
+      "note": "Reproduces the NB1 MD5 3e5e11e1e3208d2829e887fb1c86bd05 and SHA-256 e6cc7c952c688b234f9872c3e2f50060ae6556fd27925cba503c6460048e50a9. Both were recomputed from the linked PDF and match. This is an excerpt of PM3, not an independent witness account."
+    },
+    {
+      "id": "compare-report-1",
+      "title": "Text comparison 1 · October → Bohm",
+      "kind": "HTML comparison report · NicholasBohm/Emails",
+      "url": "https://github.com/NicholasBohm/Emails/blob/main/Text-Compare-Report-1.html",
+      "note": "Compares the 3 October and 11 November PDFs. Wording changes: the fee paragraph is added and “also” is removed from the following honesty-incentive sentence. Other highlights reflect wrapping and repagination. Reviewed against the original files on 21 October 2026."
+    },
+    {
+      "id": "compare-report-2",
+      "title": "Text comparison 2 · Bohm → March",
+      "kind": "HTML comparison report · NicholasBohm/Emails",
+      "url": "https://github.com/NicholasBohm/Emails/blob/main/Text-Compare-Report-2.html",
+      "note": "Compares the 11 November and 24 March PDFs. Flags abstract, contact, network, fee and SPV wording edits, plus the unchanged difficulty paragraph’s move from §6 to §4. All wording edits are covered in the site’s selected passages. Reviewed against the original files on 21 October 2026."
+    },
+    {
+      "id": "fees-email",
+      "title": "Satoshi on fees, 10 November 2008 (UTC)",
+      "kind": "Contemporaneous mailing-list message",
+      "url": "https://www.metzdowd.com/pipermail/cryptography/2008-November/014842.html",
+      "note": "Reply to James A. Donald at 02:14:30 UTC on 10 November (9 November in the message’s local timezone). Precedes the Bohm export. This supplies context for the addition, not proof of direct causation."
+    },
+    {
+      "id": "march-pdf",
+      "title": "The bitcoin.org PDF",
+      "kind": "Original file · locally hashed",
+      "url": "https://bitcoin.org/bitcoin.pdf",
+      "note": "184,292 bytes. Its PDF creation field records 24 March 2009."
+    },
+    {
+      "id": "sourceforge",
+      "title": "SourceForge · Design Paper",
+      "kind": "Historical distribution location",
+      "url": "https://sourceforge.net/projects/bitcoin/files/Design%20Paper/bitcoin.pdf/",
+      "note": "Historical file location. Availability can vary; the bundled March PDF is independently hashed."
+    },
+    {
+      "id": "sourceforge-discussion",
+      "title": "The 2015 version-recovery discussion",
+      "kind": "Historical forum discussion",
+      "url": "https://bitcointalk.org/index.php?topic=933876.0",
+      "note": "Contemporary recovery discussion identifies the SourceForge version with 24 March 2009."
+    },
+    {
+      "id": "back-exhibit",
+      "title": "Adam Back correspondence, Exhibit AB1",
+      "kind": "COPA v Wright · correspondence exhibit",
+      "url": "https://s3.documentcloud.org/documents/24439625/adam-back-exhibit-ab1-1.pdf",
+      "note": "First email: 20 August 2008, 17:30:39 UTC. The draft link, early title and contact with Adam Back precede the public announcement."
+    },
+    {
+      "id": "monger-receipt-2015",
+      "title": "StealthMonger’s receipt date and SHA-256",
+      "kind": "First-person mailing-list post · 26 January 2015",
+      "url": "https://www.metzdowd.com/pipermail/cryptography/2015-January/024467.html",
+      "note": "Reports receipt on 8 November 2008 and publishes the SHA-256 of the eight-page copy. No receipt time or timezone is supplied. Keep this separate from the 2 November local-file-date report."
+    },
+    {
+      "id": "sourceforge-jan6",
+      "title": "SourceForge capture, 6 January 2009",
+      "kind": "Wayback Machine · historical project listing",
+      "url": "https://web.archive.org/web/20090106201347/http://sourceforge.net/projects/bitcoin/",
+      "note": "The captured listing describes bitcoin.pdf as added “1 month ago.” This suggests December 2008 availability; late November is not excluded. No hash identifies the hosted version, so the listing cannot establish that it was the Bohm copy."
+    },
+    {
+      "id": "genesis",
+      "title": "Genesis block timestamp, Bitcoin Core",
+      "kind": "Bitcoin Core v28.0 · chain parameters",
+      "url": "https://github.com/bitcoin/bitcoin/blob/v28.0/src/kernel/chainparams.cpp",
+      "note": "The genesis block’s nTime 1231006505 converts to 3 January 2009, 18:15:05 UTC. This is a block timestamp, not independent proof of the exact time it was mined."
+    },
+    {
+      "id": "bitcoin-release",
+      "title": "Bitcoin v0.1 announcement, 8 January 2009",
+      "kind": "Contemporaneous mailing-list message",
+      "url": "https://www.metzdowd.com/pipermail/cryptography/2009-January/014994.html",
+      "note": "Satoshi’s first software-release announcement: 8 January 2009, 19:27:40 UTC."
+    },
+    {
+      "id": "abstract-jan31",
+      "title": "Bitcoin.org: earlier abstract, 31 January 2009",
+      "kind": "Wayback Machine · website capture",
+      "url": "https://web.archive.org/web/20090131115053/http://bitcoin.org/",
+      "note": "Captured at 11:50:53 UTC. The earlier abstract is still online, with “financial institutions” where the October and Bohm PDFs say “a financial institution.” A webpage capture does not identify the exact bytes of its linked PDF."
+    },
+    {
+      "id": "abstract-mar3",
+      "title": "Bitcoin.org: final abstract, 3 March 2009",
+      "kind": "Wayback Machine · website capture",
+      "url": "https://web.archive.org/web/20090303195936/http://bitcoin.org/",
+      "note": "Captured at 19:59:36 UTC. The abstract matches the preserved March PDF after normalizing whitespace. Together with 31 January, this brackets the website edit; it does not establish an earlier revised PDF."
+    }
+  ],
+  "sections": [
+    {
+      "id": "abstract",
+      "label": "Abstract",
+      "heading": "The opening argument",
+      "note": "Complete abstracts. Line wrapping and repeated spaces are normalized; the words and punctuation are preserved."
+    },
+    {
+      "id": "title",
+      "label": "Title",
+      "heading": "An idea gets its name",
+      "note": "The August title is preserved in the email. The full August PDF does not survive in this source record."
+    },
+    {
+      "id": "fees",
+      "label": "Transaction fees",
+      "heading": "From new coins to fees",
+      "note": "The fee paragraph is absent in October, added in November, then reworded in March. No surviving PDF gives the numerical 21-million cap."
+    },
+    {
+      "id": "network",
+      "label": "Network",
+      "heading": "A small edit, twice",
+      "note": "The first step of §5. The same “broadcasted” → “broadcast” edit appears in the abstract."
+    },
+    {
+      "id": "spv",
+      "label": "Payment verification",
+      "heading": "Editing the security explanation",
+      "note": "The second paragraph of §8. March removes “and are only vulnerable to reversal” and changes “reported” transactions to “alerted” transactions."
+    },
+    {
+      "id": "contact",
+      "label": "Email / contact address",
+      "heading": "AnonymousSpeech → Vistomail → GMX",
+      "note": "August: satoshi@anonymousspeech.com is the sender in the Back and Dai emails, not a verified printed PDF address. October and November page 1: satoshi@vistomail.com. March page 1: satoshin@gmx.com, with an extra “n” in the username. The missing August PDF’s printed contact remains unknown."
+    },
+    {
+      "id": "honesty",
+      "label": "Honesty incentive",
+      "heading": "One “also” disappears",
+      "note": "The opening sentence of the honesty paragraph in §6. November removes “also” after inserting the separate transaction-fee paragraph."
+    }
+  ],
+  "comparisonReview": {
+    "date": "2026-10-21",
+    "sourceIds": [
+      "compare-report-1",
+      "compare-report-2"
+    ],
+    "result": "All wording edits flagged by the two supplied reports are covered by the existing PDF comparison passages; no additional wording passage was required.",
+    "octoberToBohm": [
+      "Fee paragraph added in §6.",
+      "“also” removed from the following honesty-incentive sentence."
+    ],
+    "bohmToMarch": [
+      "Contact address changed.",
+      "Abstract revised.",
+      "First network step: broadcasted → broadcast.",
+      "Fee paragraph reworded.",
+      "SPV: “and are only vulnerable to reversal” removed; reported → alerted."
+    ],
+    "layoutNotes": [
+      "Difficulty paragraph relocated unchanged from §6 to §4.",
+      "Page numbers, line wrapping and line-end hyphen splits are not counted as wording edits."
+    ]
+  },
+  "chronology": {
+    "range": "August 2008 – March 2009",
+    "graphic": "assets/research/bitcoin-whitepapers-timeline.png",
+    "brief": "assets/research/bitcoin-whitepapers-overview.pdf",
+    "websiteEditWindow": {
+      "after": "2009-01-31T11:50:53Z",
+      "by": "2009-03-03T19:59:36Z",
+      "scope": "Website abstract only; does not establish an earlier revised PDF."
+    },
+    "chartSources": [
+      "back-exhibit",
+      "announcement",
+      "monger-date",
+      "monger-receipt-2015",
+      "bohm-statement",
+      "bohm-pm3",
+      "fees-email",
+      "dai",
+      "sourceforge-jan6",
+      "genesis",
+      "bitcoin-release",
+      "abstract-jan31",
+      "abstract-mar3"
+    ],
+    "wordEdits": {
+      "augustToOctober": 8,
+      "octoberToBohm": 60,
+      "bohmToMarch": 53,
+      "method": "One added, deleted or replaced word is one edit within corresponding passages; ignore case, punctuation and layout. The August comparison covers only the surviving title and abstract. The unchanged 39-word difficulty paragraph moves without counting as a wording edit. Counting capitalization would make the final figure 54."
+    },
+    "events": [
+      {
+        "dateLabel": "20 August 2008",
+        "time": "17:30:39 UTC",
+        "datetime": "2008-08-20T17:30:39Z",
+        "precisionNote": "Correspondence · second precision",
+        "title": "Satoshi writes to Adam Back",
+        "description": "Satoshi shares a draft link and the early title. The full August PDF remains missing.",
+        "source": "back-exhibit"
+      },
+      {
+        "dateLabel": "22 August 2008",
+        "time": null,
+        "datetime": "2008-08-22",
+        "precisionNote": "Displayed date; timezone not established",
+        "title": "Satoshi writes to Wei Dai",
+        "description": "The correspondence preserves the early title and abstract. The transcript does not supply a UTC offset.",
+        "source": "dai"
+      },
+      {
+        "dateLabel": "3 October 2008",
+        "time": "20:49:58 UTC",
+        "datetime": "2008-10-03T20:49:58Z",
+        "precisionNote": "PDF creation field · converted to UTC",
+        "title": "The eight-page PDF is exported",
+        "description": "The surviving StealthMonger/Gwern file records this creation timestamp. Metadata is distinct from publication.",
+        "source": "october-pdf"
+      },
+      {
+        "dateLabel": "31 October 2008",
+        "time": "18:10:00 UTC",
+        "datetime": "2008-10-31T18:10:00Z",
+        "precisionNote": "Public announcement · second precision",
+        "title": "Whitepaper Day",
+        "description": "Satoshi publicly announces Bitcoin on the Cryptography mailing list. The title and abstract match the surviving eight-page copy.",
+        "source": "announcement"
+      },
+      {
+        "dateLabel": "2 November 2008",
+        "time": null,
+        "datetime": null,
+        "precisionNote": "Reported local file date; time and timezone unknown",
+        "title": "StealthMonger’s local file date",
+        "description": "A later post reports this local file date. It is distinct from the stated 8 November receipt date.",
+        "source": "monger-date"
+      },
+      {
+        "dateLabel": "8 November 2008",
+        "time": null,
+        "datetime": null,
+        "precisionNote": "Reported receipt date; time and timezone unknown",
+        "title": "StealthMonger’s reported receipt",
+        "description": "StealthMonger reports receiving the whitepaper and supplies the SHA-256 of the eight-page file.",
+        "source": "monger-receipt-2015"
+      },
+      {
+        "dateLabel": "10 November 2008",
+        "time": "02:14:30 UTC",
+        "datetime": "2008-11-10T02:14:30Z",
+        "precisionNote": "Correspondence · second precision",
+        "title": "Satoshi discusses transaction fees",
+        "description": "The reply to James A. Donald precedes the Bohm export. Its connection to the added fee paragraph is contextual, not proof of causation.",
+        "source": "fees-email"
+      },
+      {
+        "dateLabel": "11 November 2008",
+        "time": "16:00:34 UTC",
+        "datetime": "2008-11-11T16:00:34Z",
+        "precisionNote": "PDF creation field · converted to UTC",
+        "title": "The Bohm revision is exported",
+        "description": "The nine-page copy adds the transaction-fee paragraph and removes “also” from the following honesty-incentive sentence.",
+        "source": "bohm-pdf"
+      },
+      {
+        "dateLabel": "Possibly December 2008",
+        "time": null,
+        "datetime": null,
+        "precisionNote": "Inferred availability; exact version unverified",
+        "title": "A whitepaper is listed on SourceForge",
+        "description": "A 6 January 2009 capture says bitcoin.pdf was added “1 month ago.” Late November is not excluded, and no hash identifies the hosted PDF.",
+        "source": "sourceforge-jan6"
+      },
+      {
+        "dateLabel": "3 January 2009",
+        "time": "18:15:05 UTC",
+        "datetime": "2009-01-03T18:15:05Z",
+        "precisionNote": "Genesis block timestamp",
+        "title": "Bitcoin’s genesis block",
+        "description": "The block timestamp supplies a milestone between the November export and the final March PDF.",
+        "source": "genesis"
+      },
+      {
+        "dateLabel": "8 January 2009",
+        "time": "19:27:40 UTC",
+        "datetime": "2009-01-08T19:27:40Z",
+        "precisionNote": "Public announcement · second precision",
+        "title": "Bitcoin v0.1 is announced",
+        "description": "Satoshi announces the first software release on the Cryptography mailing list.",
+        "source": "bitcoin-release"
+      },
+      {
+        "dateLabel": "18 January 2009",
+        "time": "13:27 UTC",
+        "datetime": "2009-01-18T13:27Z",
+        "precisionNote": "Download record · minute precision",
+        "title": "Nicholas Bohm downloads his copy",
+        "description": "Bohm’s witness statement records this download. His preserved file is the nine-page November revision.",
+        "source": "bohm-statement"
+      },
+      {
+        "dateLabel": "31 January 2009",
+        "time": "11:50:53 UTC",
+        "datetime": "2009-01-31T11:50:53Z",
+        "precisionNote": "Website capture · second precision",
+        "title": "The earlier abstract is still online",
+        "description": "The wording is a near-match to the October and Bohm PDFs, with the “financial institutions” variant.",
+        "source": "abstract-jan31"
+      },
+      {
+        "dateLabel": "3 March 2009",
+        "time": "19:59:36 UTC",
+        "datetime": "2009-03-03T19:59:36Z",
+        "precisionNote": "Website capture · second precision",
+        "title": "The final abstract is already online",
+        "description": "The website matches the final PDF abstract before the preserved March export. This dates website wording, not an earlier PDF.",
+        "source": "abstract-mar3"
+      },
+      {
+        "dateLabel": "24 March 2009",
+        "time": "17:33:15 UTC",
+        "datetime": "2009-03-24T17:33:15Z",
+        "precisionNote": "PDF creation field · converted to UTC",
+        "title": "The final preserved PDF is exported",
+        "description": "The nine-page March file revises the abstract, fees and SPV wording, moves the unchanged difficulty paragraph and changes the contact address.",
+        "source": "march-pdf"
+      },
+      {
+        "dateLabel": "24 March 2009",
+        "time": "17:50:18 UTC",
+        "datetime": "2009-03-24T17:50:18Z",
+        "precisionNote": "Archived RSS pubDate",
+        "title": "The matching PDF is published on SourceForge",
+        "description": "Appendix PM3 reproduces an archived RSS entry with this publication time and a matching MD5, 17 minutes and 3 seconds after the export.",
+        "source": "bohm-pm3"
+      }
+    ]
+  }
+};

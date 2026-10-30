@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f3f1e8">
+  <meta name="description" content="Explore the Bitcoin whitepaper’s evolution from the August 2008 email abstract to the October, November and March 2009 PDFs. Compare the words and inspect the original pages.">
+  <meta property="og:title" content="The Bitcoin Whitepapers, Evolution.">
+  <meta property="og:description" content="Four versions of The Bitcoin Whitepaper are known. Three are accounted for. One remains lost...">
+  <meta property="og:type" content="website">
+  <title>The Bitcoin Whitepapers, Evolution. — An Interactive Archive</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script src="theme.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="chronology.css">
+  <script defer src="data.js"></script>
+  <script defer src="app.js"></script>
+  <script defer src="chronology.js"></script>
+</head>
+<body>
+  <a class="skip" href="#journey">Skip to the interactive archive</a>
+  <header class="masthead wrap">
+    <a class="brand" href="https://satoshitimes.com/" target="_blank" rel="noopener noreferrer" aria-label="The Satoshi Times, opens in a new tab">
+      <img class="brand-image" src="assets/satoshi-times-banner.jpg" alt="The Satoshi Times" width="1701" height="506">
+    </a>
+    <nav aria-label="Main navigation"><a href="#journey">The journey</a><a href="#compare">Compare editions</a><a href="#chronology">Timeline &amp; evidence</a><a href="#sources">Source desk <span aria-hidden="true">↗</span></a></nav>
+    <div class="mast-tools"><span class="mast-date">2008 — 2009</span><button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false"><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></svg><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg><span class="theme-label">Dark mode</span></button></div>
+  </header>
+
+  <main>
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> THE FORGING OF THE WHITEPAPERS</p>
+        <h1 id="hero-title">The Bitcoin<br>Whitepapers,<br><em>Evolution.</em></h1>
+        <p class="hero-description">Four versions of The Bitcoin Whitepaper are known. Three are accounted for. One remains lost...</p>
+        <a class="text-link hero-link" href="#journey">Begin in August 2008 <span aria-hidden="true">↓</span></a>
+        <div class="hero-facts"><span><b>04</b> stages in the record</span><i></i><span><b>03</b> surviving PDFs</span></div>
+      </div>
+      <div class="hero-art" aria-label="A stack of the four historical stages">
+        <div class="orbit-note top-note"><span>From a private email</span><svg viewBox="0 0 70 40" aria-hidden="true"><path d="M2 3Q52 1 64 31m-10-6 10 6 2-11"/></svg></div>
+        <div class="paper-stack" id="paper-stack">
+          <button class="specimen specimen-march" data-go="3" aria-label="Select the March 2009 edition"><img src="assets/pages/march/1.webp" alt="First page of the March 2009 whitepaper" width="952" height="1347"><span>24 MAR 2009</span></button>
+          <button class="specimen specimen-bohm" data-go="2" aria-label="Select the November 2008 Bohm edition"><img src="assets/pages/bohm/1.webp" alt="First page of the November 2008 whitepaper" width="952" height="1347"><span>11 NOV 2008</span></button>
+          <button class="specimen specimen-october" data-go="1" aria-label="Select the October 2008 StealthMonger edition"><img src="assets/pages/october/1.webp" alt="First page of the October 2008 whitepaper" width="952" height="1347"><span>03 OCT 2008</span></button>
+          <button class="specimen specimen-august" data-go="0" aria-label="Select the August 2008 email abstract">
+            <span class="email-label">PRIVATE CORRESPONDENCE</span>
+            <span class="email-rule"></span>
+            <span class="email-to">From: satoshi@anonymousspeech.com<br>To: Wei Dai<br>August 2008</span>
+            <strong>Electronic Cash<br>Without a Trusted<br>Third Party</strong>
+            <span class="email-fragment">A purely peer-to-peer version of electronic cash would allow online payments to be sent directly from one party to another without the burdens of going through a financial institution.</span>
+            <span class="email-sign">Satoshi</span>
+            <span class="transcription-label">EMAIL TRANSCRIPTION</span>
+          </button>
+        </div>
+        <div class="orbit-note bottom-note"><svg viewBox="0 0 75 40" aria-hidden="true"><path d="M5 5q8 33 63 28m-7-8 7 8-10 4"/></svg><span>…to the paper we know.</span></div>
+      </div>
+    </section>
+
+    <section class="time-machine" id="journey" aria-labelledby="timeline-title">
+      <div class="wrap">
+        <div class="timeline-top"><h2 id="timeline-title">Slide through the record</h2><div class="timeline-actions"><span class="small-note">Four stages · dates not to scale</span><button id="play-tour" class="quiet-button" type="button"><span aria-hidden="true">▶</span> Play the journey</button></div></div>
+        <div class="rail-shell">
+          <div class="rail-ticks" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <input id="timeline-slider" type="range" min="0" max="3" step="1" value="0" aria-label="Historical stage" aria-valuetext="August 2008, the private draft">
+        </div>
+        <div class="timeline-stops" id="timeline-stops">
+          <button type="button" data-go="0" class="active" aria-pressed="true"><span>AUG <b>2008</b></span><small>The private draft</small></button>
+          <button type="button" data-go="1" aria-pressed="false"><span>03 OCT <b>2008</b></span><small>StealthMonger’s copy</small></button>
+          <button type="button" data-go="2" aria-pressed="false"><span>11 NOV <b>2008</b></span><small>Bohm’s copy</small></button>
+          <button type="button" data-go="3" aria-pressed="false"><span>24 MAR <b>2009</b></span><small>The familiar edition</small></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="reading-room wrap" aria-labelledby="stage-heading">
+      <div class="chapter-heading"><div><p class="eyebrow" id="stage-kicker">01 / PRIVATE CORRESPONDENCE</p><h2 id="stage-heading">Before the name</h2></div><div class="chapter-controls"><button id="prev-stage" class="circle-button" type="button" aria-label="Previous stage">←</button><span id="chapter-count">01 / 04</span><button id="next-stage" class="circle-button" type="button" aria-label="Next stage">→</button></div></div>
+      <div class="reading-layout">
+        <article class="transcript">
+          <div class="transcript-toolbar"><span id="artifact-label">SURVIVING EMAIL ABSTRACT</span><label class="switch-label"><input id="highlight-edits" type="checkbox" checked><span class="switch" aria-hidden="true"></span> Highlight edits</label></div>
+          <div class="document-body">
+            <p class="document-overline" id="document-overline">TITLE AS SENT IN AUGUST 2008</p>
+            <h3 id="document-title">Electronic Cash Without a Trusted Third Party</h3>
+            <p class="document-author">Satoshi Nakamoto<span id="document-contact"></span></p>
+            <div class="abstract-text" id="abstract-text"></div>
+            <div class="document-end"><span>◆</span></div>
+          </div>
+          <div class="transcript-foot"><span id="abstract-status">The starting text in this four-stage record.</span><button id="open-document" type="button" class="text-button">Read source email ↗</button></div>
+        </article>
+        <aside class="context-panel" aria-label="Historical background">
+          <span class="archive-badge" id="stage-badge">A surviving fragment</span>
+          <h3 id="stage-dek">A paper shared in private. An idea almost ready for the world.</h3>
+          <p id="stage-story"></p>
+          <dl class="stage-facts"><div><dt id="date-label">CORRESPONDENCE</dt><dd id="stage-date">20–22 August 2008</dd><small id="stage-time"></small></div><div><dt>WHAT SURVIVES</dt><dd id="stage-survival"></dd></div></dl>
+          <div class="change-note"><span class="small-label">IN THIS STAGE</span><h4 id="stage-change-title"></h4><p id="stage-change"></p><button id="compare-stage" type="button" class="text-button">Explore the changes <span aria-hidden="true">↘</span></button></div>
+          <details class="provenance-note"><summary>Dates & provenance</summary><p id="stage-date-note"></p><p id="stage-caution"></p><div id="stage-source-links"></div></details>
+        </aside>
+      </div>
+    </section>
+
+    <section class="comparison-section" id="compare" aria-labelledby="compare-heading">
+      <div class="wrap">
+        <div class="comparison-heading"><div><p class="eyebrow">THE REVISION ROOM</p><h2 id="compare-heading">Every word leaves a trace.</h2><p>Choose two stages. See what changed, what stayed, and what moved.</p></div><div class="view-tabs" aria-label="Comparison view"><button type="button" id="text-view-button" class="active" aria-pressed="true">Text</button><button type="button" id="page-view-button" aria-pressed="false">Page overlay</button></div></div>
+        <div class="comparison-controls">
+          <label>FROM<select id="compare-from" aria-label="Earlier comparison stage"></select></label>
+          <button id="swap-versions" type="button" class="swap-button" aria-label="Swap comparison stages">⇄</button>
+          <label>TO<select id="compare-to" aria-label="Later comparison stage"></select></label>
+          <label class="section-select">PASSAGE<select id="compare-section" aria-label="Passage to compare"></select></label>
+        </div>
+        <div id="text-comparison">
+          <div class="passage-head"><div><span class="small-label" id="passage-location">ABSTRACT</span><h3 id="passage-heading">The opening argument</h3></div><div class="diff-legend"><span><i class="removed-key"></i>Removed</span><span><i class="added-key"></i>Added</span></div></div>
+          <div class="diff-panels"><article><header><span id="from-date"></span><small id="from-location"></small></header><div class="diff-text" id="from-text"></div></article><article><header><span id="to-date"></span><small id="to-location"></small></header><div class="diff-text" id="to-text"></div></article></div>
+          <div class="comparison-foot"><p id="comparison-result" role="status"></p><button id="toggle-diff" type="button" aria-pressed="true">Hide highlights</button></div>
+          <p class="comparison-note" id="passage-note"></p>
+        </div>
+        <div id="page-comparison" hidden>
+          <p class="overlay-intro">Slide the divider to reveal each original page. Pagination changes between editions; the same page number may contain different passages.</p>
+          <div class="overlay-toolbar"><label>PAGE<select id="overlay-page" aria-label="Page number for overlay"></select></label><span id="overlay-pages-note"></span><button id="reset-wipe" type="button">Center divider</button></div>
+          <div id="overlay-unavailable" class="unknown-note" hidden>The full August PDF is not available. Choose two surviving PDFs to compare their pages.</div>
+          <div id="overlay-content"><div class="overlay-captions"><span id="overlay-from-label"></span><span id="overlay-to-label"></span></div><div class="page-overlay" id="page-overlay"><img id="overlay-base" alt="Earlier selected edition, original page"><img id="overlay-reveal" alt="Later selected edition, original page"><div class="wipe-divider" aria-hidden="true"><span>↔</span></div><input id="wipe-slider" type="range" min="0" max="100" value="50" aria-label="Page reveal divider, percentage of later edition"></div><p class="overlay-hint">Drag across the page · use arrow keys when the divider is focused</p></div>
+        </div>
+        <div class="email-history" aria-labelledby="email-history-heading">
+          <div class="email-history-heading"><span class="small-label">THE ADDRESS TRAIL</span><h3 id="email-history-heading">Three addresses. One unfolding record.</h3></div>
+          <ol class="email-history-stages">
+            <li><span class="email-period">01 · AUGUST 2008</span><code>satoshi@anonymousspeech.com</code><p>Sender in the emails to Adam Back and Wei Dai.</p><small>EMAIL CORRESPONDENCE</small></li>
+            <li><span class="email-period">02–03 · OCTOBER &amp; NOVEMBER 2008</span><code>satoshi@vistomail.com</code><p>Printed on the StealthMonger and Bohm copies.</p><small>PDF · PAGE 1</small></li>
+            <li><span class="email-period">04 · MARCH 2009</span><code>satoshin@gmx.com</code><p>The domain changes, and the username gains an “n.”</p><small>PDF · PAGE 1</small></li>
+          </ol>
+          <div class="email-history-foot"><p>The August sender address survives in the correspondence. The address printed in the missing August PDF remains unknown.</p><div><button type="button" data-compare="august,october,contact">Email → first PDF ↗</button><button type="button" data-compare="bohm,march,contact">Vistomail → GMX ↗</button></div></div>
+        </div>
+        <p class="relocation-note"><strong>Layout note.</strong> The difficulty-adjustment paragraph is word-for-word identical in all three PDFs. It moves from §6 (Incentive) in October and November to §4 (Proof-of-Work) in March.</p>
+        <div class="quick-changes"><span>FOLLOW A CHANGE</span><button type="button" data-compare="august,october,title">A new name ↗</button><button type="button" data-compare="october,bohm,fees">The fee paragraph ↗</button><button type="button" data-compare="october,bohm,honesty">One “also” disappears ↗</button><button type="button" data-compare="bohm,march,spv">The SPV edit ↗</button></div>
+        <details class="comparison-audit">
+          <summary>Two comparison reports, checked against the PDFs <span>REVIEW NOTES</span></summary>
+          <p>All wording edits flagged in these two reports are represented in the comparison passages above. Page numbers, line wrapping and the moved difficulty paragraph account for the remaining highlighted differences.</p>
+          <div class="audit-grid">
+            <article><span class="small-label">OCTOBER → NOVEMBER</span><h4>A paragraph arrives. One word goes.</h4><p>Report 1 adds the fee paragraph and removes “also” from the next paragraph’s opening sentence. The abstract and SPV wording stay the same; the added text shifts the page breaks.</p><a href="https://github.com/NicholasBohm/Emails/blob/main/Text-Compare-Report-1.html" target="_blank" rel="noopener noreferrer">Read comparison report 1 ↗</a></article>
+            <article><span class="small-label">NOVEMBER → MARCH</span><h4>Language tightens. A paragraph moves.</h4><p>Report 2 flags edits to the abstract, contact address, fees, first network step and second SPV paragraph. The unchanged difficulty paragraph moves from §6 to §4.</p><a href="https://github.com/NicholasBohm/Emails/blob/main/Text-Compare-Report-2.html" target="_blank" rel="noopener noreferrer">Read comparison report 2 ↗</a></article>
+          </div>
+          <p class="audit-footnote">Reviewed 21 October 2026. Line-end splits such as “peer-to-” / “peer” are normalized when comparing wording. Use the page overlay to see their original layout.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="evidence-section wrap" aria-labelledby="evidence-heading">
+      <div class="section-heading"><div><p class="eyebrow">READING THE RECORD</p><h2 id="evidence-heading">Three different kinds of date.</h2></div><p>A creation field, a public announcement and a saved download tell different parts of the story.</p></div>
+      <div class="evidence-grid">
+        <article><span class="evidence-number">01</span><h3>Created</h3><p>The three PDFs record 3 October, 11 November and 24 March. Their timezone offsets are preserved and converted to UTC below.</p><span class="evidence-tag">EMBEDDED METADATA</span></article>
+        <article><span class="evidence-number">02</span><h3>Announced</h3><p>Satoshi announced Bitcoin on 31 October 2008. The announcement’s title and abstract match the surviving October copy.</p><a class="evidence-tag" href="https://www.metzdowd.com/pipermail/cryptography/2008-October/014810.html" target="_blank" rel="noopener noreferrer">PUBLIC RECORD ↗</a></article>
+        <article><span class="evidence-number">03</span><h3>Preserved</h3><p>StealthMonger reported receipt on 8 November. Bohm’s statement records a download on 18 January 2009 at 13:27 UTC.</p><span class="evidence-tag">REPORTED DOWNLOADS</span></article>
+      </div>
+      <p class="evidence-caveat"><span aria-hidden="true">✳</span> The evidence supports a sequence of revisions. It does not establish a complete list of every draft, or prove the exact release-day bytes from metadata alone.</p>
+    </section>
+
+    <section class="chronology-section wrap" id="chronology" aria-labelledby="chronology-heading">
+      <div class="section-heading"><div><p class="eyebrow">THE DOCUMENTARY CHRONOLOGY</p><h2 id="chronology-heading">The dates behind the drafts.</h2></div><p>From the first private email to the March publication. Creation, circulation and preservation, side by side.</p></div>
+      <div class="chronology-tools"><span class="small-label">AUGUST 2008 — MARCH 2009 · UTC</span><div><button type="button" class="chronology-action" data-open-chronology>Enlarge timeline <span aria-hidden="true">↗</span></button><a class="chronology-action" href="assets/research/bitcoin-whitepapers-overview.pdf" download>Timeline &amp; research brief <span aria-hidden="true">↓ PDF</span></a></div></div>
+      <figure class="chronology-figure">
+        <a class="chronology-image-link" data-open-chronology href="assets/research/bitcoin-whitepapers-timeline.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge the Bitcoin whitepaper chronology"><img src="assets/research/bitcoin-whitepapers-timeline.png" alt="Month-by-month chronology of the four whitepaper stages, from August 2008 to March 2009. The November fee discussion precedes the Bohm export, and the final website abstract is captured before the March PDF. The dated record and chart source key follow below." width="2880" height="2274" loading="lazy" decoding="async"></a>
+        <figcaption><span>Four documentary stages. Three surviving PDFs.</span><span>Select the graphic to enlarge it. <a href="assets/research/bitcoin-whitepapers-timeline.png" download>Download image ↓</a></span></figcaption>
+      </figure>
+
+      <div class="chronology-findings">
+        <article><span class="small-label">THE WEB ABSTRACT</span><h3>The words change before the file.</h3><p>The <a href="https://web.archive.org/web/20090131115053/http://bitcoin.org/" target="_blank" rel="noopener noreferrer">31 January capture</a> preserves the earlier abstract. By the <a href="https://web.archive.org/web/20090303195936/http://bitcoin.org/" target="_blank" rel="noopener noreferrer">3 March capture</a>, the website already carries the final abstract, before the preserved PDF’s 24 March export.</p><p class="chronology-finding-note">This brackets the website edit. It does not establish an earlier revised PDF.</p></article>
+        <article><span class="small-label">THE BOHM COPY</span><h3>November export. January download.</h3><p>The nine-page file records <strong>11 November 2008, 16:00:34 UTC</strong>. Bohm’s <a href="https://bitcoindefense.org/assets/documents/Witness-Statement-of-Nicholas-Bohm.pdf#page=5" target="_blank" rel="noopener noreferrer">witness statement, §19</a>, records his download on <strong>18 January 2009, 13:27 UTC</strong>.</p><p class="chronology-finding-note">The December SourceForge listing is a separate clue; its exact PDF version remains unverified.</p></article>
+      </div>
+
+      <div class="chronology-record" aria-labelledby="record-heading">
+        <div class="chronology-subheading"><div><p class="eyebrow">THE RECORD AT A GLANCE</p><h3 id="record-heading">Four stages, one comparison.</h3></div><span class="small-note">Scroll the table on smaller screens →</span></div>
+        <div class="chronology-table-scroll" role="region" aria-label="Whitepaper version comparison, scroll horizontally" tabindex="0">
+          <table class="chronology-table">
+            <caption class="sr-only">Creation, circulation, surviving evidence and changes across the four documentary stages.</caption>
+            <thead><tr><th scope="col">The record</th><th scope="col" class="edition-august"><span>01 · AUGUST 2008</span>Private draft</th><th scope="col" class="edition-october"><span>02 · OCTOBER 2008</span>Release-era copy</th><th scope="col" class="edition-bohm"><span>03 · NOVEMBER 2008</span>Bohm revision</th><th scope="col" class="edition-march"><span>04 · MARCH 2009</span>March revision</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Circulation record</th><td><strong>20 Aug 2008</strong><br>17:30:39 UTC<small>Private email to Adam Back [1]</small></td><td><strong>31 Oct 2008</strong><br>18:10:00 UTC<small>Public announcement [2]</small></td><td><strong>Possibly Dec 2008</strong><small>SourceForge listing; version unverified [9]. Bohm downloads his copy on 18 Jan 2009 [5].</small></td><td><strong>24 Mar 2009</strong><br>17:50:18 UTC<small>SourceForge RSS pubDate reproduced in Appendix PM3 [6]</small></td></tr>
+              <tr><th scope="row">PDF export metadata</th><td>Unknown<small>Full August PDF unavailable</small></td><td><strong>3 Oct 2008</strong><br>20:49:58 UTC</td><td><strong>11 Nov 2008</strong><br>16:00:34 UTC</td><td><strong>24 Mar 2009</strong><br>17:33:15 UTC</td></tr>
+              <tr><th scope="row">Web abstract record</th><td>Unknown<small>Full August PDF unavailable</small></td><td>Near-match to 31 Jan webpage [12]<small>Same PDF abstract as Bohm</small></td><td><strong>31 Jan 2009</strong><br>11:50:53 UTC [12]<small>Earlier wording still online</small></td><td><strong>3 Mar 2009</strong><br>19:59:36 UTC [13]<small>Final wording already online</small></td></tr>
+              <tr><th scope="row">What survives</th><td><strong>Title + abstract</strong><small>Page count unknown</small></td><td><strong>Complete PDF</strong><small>8 pages</small></td><td><strong>Complete PDF</strong><small>9 pages</small></td><td><strong>Complete PDF</strong><small>9 pages</small></td></tr>
+              <tr class="chronology-counts"><th scope="row">Word edits vs previous stage</th><td><b>Baseline</b><small>Known fragments only</small></td><td><b>8*</b><small>7 title + 1 abstract</small></td><td><b>60</b><small>59 added + 1 deleted</small></td><td><b>53</b><small>Counting method below</small></td></tr>
+              <tr><th scope="row">Main changes</th><td>Proposal titled <em>Electronic Cash Without a Trusted Third Party</em>.</td><td>Adopts the Bitcoin title; “offer” becomes “provide” in the abstract.</td><td>Adds transaction fees and a possible transition to fee-only incentives.</td><td>Revises abstract, fee and SPV wording; moves the difficulty paragraph; changes email.</td></tr>
+              <tr><th scope="row">Contact address</th><td><code>satoshi@anonymousspeech.com</code><small>Email sender; PDF unknown</small></td><td><code>satoshi@vistomail.com</code><small>Printed in the PDF</small></td><td><code>satoshi@vistomail.com</code><small>Printed in the PDF</small></td><td><code>satoshin@gmx.com</code><small>Printed in the PDF</small></td></tr>
+              <tr><th scope="row">Preserved through</th><td>Adam Back &amp; Wei Dai<small>Correspondence [1, 8]</small></td><td>StealthMonger / Gwern<small>Preserved PDF [3, 4]</small></td><td>Nicholas Bohm<small>Exhibit NB1; COPA v Wright [5]</small></td><td>bitcoin.org / SourceForge<small>PDF + archived RSS evidence [6]</small></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="chronology-counting-note"><p><strong>* The August comparison covers only the surviving title and abstract.</strong> Changes to the missing full draft cannot be counted.</p><p>One added, deleted or replaced word counts as one edit within corresponding passages; case, punctuation and layout are ignored. The unchanged 39-word difficulty paragraph moves between sections. These whole-record counts use a different method from the interactive passage comparison above.</p><p>Circulation entries describe different events. The eight-page copy is consistent with the release-era paper; its exact bytes at announcement time are not independently captured.</p></div>
+      </div>
+
+      <details class="chronology-ledger">
+        <summary>Dated event record <span>16 EVENTS · PRECISION &amp; SOURCES</span></summary>
+        <p class="chronology-ledger-intro">Exact times are UTC where a timezone is established. Date-only reports retain their original uncertainty.</p>
+        <ol id="chronology-events"></ol>
+      </details>
+
+      <details class="chronology-source-key" id="chart-sources">
+        <summary>Chart source key <span>13 REFERENCES · NUMBERING IN THE GRAPHIC</span></summary>
+        <p>These numbers belong to the timeline and comparison table. The source desk below includes the wider archive bibliography.</p>
+        <ol>
+          <li><a href="https://s3.documentcloud.org/documents/24439625/adam-back-exhibit-ab1-1.pdf" target="_blank" rel="noopener noreferrer">Adam Back correspondence, Exhibit AB1 ↗</a><small>First email, 20 August 2008.</small></li>
+          <li><a href="https://www.metzdowd.com/pipermail/cryptography/2008-October/014810.html" target="_blank" rel="noopener noreferrer">Satoshi’s public announcement ↗</a><small>31 October 2008, 18:10 UTC.</small></li>
+          <li><a href="https://www.metzdowd.com/pipermail/cryptography/2015-January/024438.html" target="_blank" rel="noopener noreferrer">StealthMonger’s local file date ↗</a><small>Reports 2 November 2008; no time or timezone supplied.</small></li>
+          <li><a href="https://www.metzdowd.com/pipermail/cryptography/2015-January/024467.html" target="_blank" rel="noopener noreferrer">StealthMonger’s receipt date and SHA-256 ↗</a><small>Reports 8 November 2008; distinct from the local file date.</small></li>
+          <li><a href="https://bitcoindefense.org/assets/documents/Witness-Statement-of-Nicholas-Bohm.pdf#page=5" target="_blank" rel="noopener noreferrer">Bohm witness statement, §19 ↗</a><small>Downloaded 18 January 2009, 13:27 UTC.</small></li>
+          <li><a href="https://github.com/NicholasBohm/Emails/blob/main/Appendix%20PM3.pdf" target="_blank" rel="noopener noreferrer">Madden Appendix PM3, §§33–35 ↗</a><small>Reproduces the archived SourceForge RSS pubDate and matching March-file MD5.</small></li>
+          <li><a href="https://www.metzdowd.com/pipermail/cryptography/2008-November/014842.html" target="_blank" rel="noopener noreferrer">Satoshi replies to James A. Donald ↗</a><small>10 November 2008, 02:14:30 UTC; context for the fee paragraph, not proof of causation.</small></li>
+          <li><a href="https://gwern.net/doc/bitcoin/2008-nakamoto#emails" target="_blank" rel="noopener noreferrer">August correspondence with Wei Dai ↗</a><small>Preserves the early title and abstract.</small></li>
+          <li><a href="https://web.archive.org/web/20090106201347/http://sourceforge.net/projects/bitcoin/" target="_blank" rel="noopener noreferrer">SourceForge capture, 6 January 2009 ↗</a><small>The “1 month ago” listing suggests December availability; late November is not excluded and the PDF version is unverified.</small></li>
+          <li><a href="https://github.com/bitcoin/bitcoin/blob/v28.0/src/kernel/chainparams.cpp" target="_blank" rel="noopener noreferrer">Genesis block timestamp, Bitcoin Core ↗</a><small>3 January 2009, 18:15:05 UTC; block timestamp.</small></li>
+          <li><a href="https://www.metzdowd.com/pipermail/cryptography/2009-January/014994.html" target="_blank" rel="noopener noreferrer">Bitcoin v0.1 announcement ↗</a><small>8 January 2009, 19:27:40 UTC.</small></li>
+          <li><a href="https://web.archive.org/web/20090131115053/http://bitcoin.org/" target="_blank" rel="noopener noreferrer">Bitcoin.org: earlier abstract ↗</a><small>31 January 2009, 11:50:53 UTC. “Financial institutions” differs from the earlier PDFs’ “a financial institution.”</small></li>
+          <li><a href="https://web.archive.org/web/20090303195936/http://bitcoin.org/" target="_blank" rel="noopener noreferrer">Bitcoin.org: final abstract ↗</a><small>3 March 2009, 19:59:36 UTC; matches the final PDF abstract after whitespace normalization.</small></li>
+        </ol>
+      </details>
+    </section>
+
+    <section class="sources-section wrap" id="sources" aria-labelledby="sources-heading">
+      <div class="section-heading"><div><p class="eyebrow">THE SOURCE DESK</p><h2 id="sources-heading">Don’t take the typesetting on trust.</h2></div><p>Inspect the pages. Download the original files. Check the hashes.</p></div>
+      <div id="source-documents" class="source-documents"></div>
+      <details class="sources-details"><summary><span>Sources, method & reading notes</span><span class="source-count">24 records</span></summary><div class="method-note"><h3>How this archive works</h3><p>The August view transcribes the abstract preserved in the Wei Dai correspondence and identifies the sender address also visible in the Adam Back email. That address is not evidence of what was printed in the missing PDF. The three PDF views use the actual files. Their hashes, byte counts, page counts and creation fields were read directly from those files. The bundled PDFs are unchanged; page images are rendered derivatives.</p><p>Text comparisons cover the full abstract and six selected titles, addresses or passages. Line wrapping and repeated spaces are normalized. Both supplied HTML comparison reports were reviewed against the original PDFs; their wording edits are covered in these passages. These are not whole-document binary diffs. Use the original PDFs and page overlay for layout, equations, diagrams and pagination.</p><p>The Bohm PDF linked from NicholasBohm/Emails matches the bundled verified copy byte for byte. Its MD5 and SHA-256 also match Appendix PM3, §42 (pp. 14–15), reproduced in the linked JFIF. The appendix identifies itself as “Madden Appendix PM3”; its NB1 analysis begins at §41.</p><p>The chronology adds two bitcoin.org captures, a SourceForge listing and the RSS publication record reproduced in Appendix PM3. Website captures establish abstract wording, not the linked PDF’s exact contents. The possible December listing remains unverified by a file hash. The comparison table’s word-edit counts ignore case, punctuation and layout, whereas the interactive passage comparison retains punctuation.</p><p>The August draft’s full contents are unknown. A missing passage is marked “unknown,” rather than treated as evidence it was absent. The October fee paragraph, by contrast, is demonstrably absent. Equal spacing on the interactive four-stop timeline is for navigation, not elapsed time. The month-by-month graphic uses equal-width months, with day positions inside each month. “Four stages” is an editorial structure, not Satoshi’s version numbering.</p></div><ol id="sources-list"></ol></details>
+    </section>
+  </main>
+  <footer id="site-footer" class="footer wrap"><div><strong>The Bitcoin Whitepapers, Evolution.</strong><p>A visual archive of a text by Satoshi Nakamoto.</p></div><div><a href="archive-data.json" download>Download research data ↓</a><a href="README.md">Hosting & research notes ↗</a><a href="#">Back to the beginning ↑</a></div><small>August 2008 — March 2009<br>Prepared for The Satoshi Times</small><p class="copyright">© 2026 The Satoshi Times.</p></footer>
+
+  <dialog id="chronology-dialog" class="chronology-dialog" aria-labelledby="chronology-viewer-title"><div class="viewer-toolbar"><div><span class="small-label">THE DOCUMENTARY CHRONOLOGY</span><h2 id="chronology-viewer-title">The Bitcoin Whitepapers</h2></div><button id="close-chronology" type="button" aria-label="Close timeline">✕</button></div><div class="chronology-viewer-tools"><label><input id="chronology-zoom" type="checkbox" checked> Larger view</label><p>Scroll to inspect the dates and notes.</p><a href="assets/research/bitcoin-whitepapers-timeline.png" download>Download image ↓</a></div><div class="chronology-viewer-scroll zoomed" id="chronology-viewer-scroll" tabindex="0" role="region" aria-label="Enlarged timeline, scroll to explore"><img src="assets/research/bitcoin-whitepapers-timeline.png" alt="Enlarged whitepaper chronology, August 2008 to March 2009" width="2880" height="2274" loading="lazy" decoding="async"></div><p class="viewer-note">Dates, provenance and the numbered source key are also available as text below the graphic.</p></dialog>
+  <dialog id="document-dialog" aria-labelledby="viewer-title"><div class="viewer-toolbar"><div><span class="small-label">ORIGINAL DOCUMENT</span><h2 id="viewer-title">The October edition</h2></div><button id="close-viewer" type="button" aria-label="Close document viewer">✕</button></div><div class="viewer-controls"><button id="viewer-prev" type="button" aria-label="Previous page">←</button><label>Page <select id="viewer-page" aria-label="Document page"></select></label><span id="viewer-total"></span><button id="viewer-next" type="button" aria-label="Next page">→</button><a id="viewer-download" download>Download original PDF ↓</a><label class="zoom-label"><input id="viewer-zoom" type="checkbox"> Larger view</label></div><div class="viewer-scroll" id="viewer-scroll"><img id="viewer-image" alt="Original whitepaper page"></div><p class="viewer-note">Rendered from the preserved PDF. Use the download for the original bytes and selectable text.</p></dialog>
+  <div class="toast" id="toast" role="status"></div><div class="sr-only" id="stage-announcer" aria-live="polite"></div>
+  <noscript><div class="noscript-note wrap">This interactive comparison needs JavaScript. The original files remain available: <a href="https://gwern.net/doc/bitcoin/2008-10-03-nakamoto-bitcoindraft.pdf">October 2008</a>, <a href="https://github.com/NicholasBohm/Emails/blob/main/bitcoin-nb1.pdf">November 2008</a>, <a href="https://bitcoin.org/bitcoin.pdf">March 2009</a>. See <a href="README.md">research notes</a>.</div></noscript>
+</body>
+</html>

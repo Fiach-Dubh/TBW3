@@ -1,0 +1,3 @@
+427c63b364c6db914cf23072a09ffd53ee078397b7c6ab2d604e12865a982faa  assets/documents/october.pdf
+e6cc7c952c688b234f9872c3e2f50060ae6556fd27925cba503c6460048e50a9  assets/documents/bohm.pdf
+b1674191a88ec5cdd733e4240a81803105dc412d6c6708d53ab94fc248f4f553  assets/documents/march.pdf
